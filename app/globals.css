@@ -1,27 +1,93 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+*{
+  font-family: "Rubik", sans-serif;
 
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
 }
-
-@media (prefers-color-scheme: dark) {
+@layer base {
   :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-  }
-}
+    --background: 240 10% 3.9%; /* Very dark almost black */
+    --foreground: 240 5% 64.9%; /* Light gray for text */
 
-body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+    --card: 240 10% 3.9%; /* Dark card background */
+    --card-foreground: 240 5% 64.9%; /* Light text on card */
+
+    --popover: 240 10% 3.9%; /* Dark popover background */
+    --popover-foreground: 240 5% 64.9%; /* Light text on popover */
+
+    --primary: 260 70% 60%; /* Vibrant purple */
+    --primary-foreground: 240 5% 64.9%; /* Light text on primary */
+
+    --secondary: 100 5% 20%; /* Muted dark gray */
+    --secondary-foreground: 240 5% 64.9%; /* Light text on secondary */
+
+    --muted: 100 5% 20%; /* Muted dark gray */
+    --muted-foreground: 240 5% 40%; /* Slightly darker muted text */
+
+    --accent: 180 100% 50%; /* Electric blue */
+    --accent-foreground: 240 10% 3.9%; /* Dark text on accent */
+
+    --destructive: 0 84.2% 60.2%; /* Red for destructive actions */
+    --destructive-foreground: 0 0% 98%;
+
+    --border: 240 5% 20%; /* Dark border */
+    --input: 240 5% 20%; /* Dark input background */
+    --ring: 180 100% 50%; /* Electric blue ring */
+
+    --radius: 0.5rem;
+
+    /* Sidebar specific colors (from shadcn docs) [^4] */
+    --sidebar-background: 240 10% 3.9%; /* Same as main background for consistency */
+    --sidebar-foreground: 240 5% 64.9%;
+    --sidebar-primary: 270 70% 60%;
+    --sidebar-primary-foreground: 240 5% 64.9%;
+    --sidebar-accent: 240 5% 20%;
+    --sidebar-accent-foreground: 180 100% 50%; /* Electric blue for accent text */
+    --sidebar-border: 240 5% 20%;
+    --sidebar-ring: 180 100% 50%;
+  }
+
+  .dark {
+    /* Already dark, so these can largely remain the same or be slightly adjusted */
+    --background: 240 10% 3.9%;
+    --foreground: 240 5% 64.9%;
+
+    --card: 240 10% 3.9%;
+    --card-foreground: 240 5% 64.9%;
+
+    --popover: 240 10% 3.9%;
+    --popover-foreground: 240 5% 64.9%;
+
+    --primary: 270 70% 60%;
+    --primary-foreground: 240 5% 64.9%;
+
+    --secondary: 240 5% 20%;
+    --secondary-foreground: 240 5% 64.9%;
+
+    --muted: 240 5% 20%;
+    --muted-foreground: 240 5% 40%;
+
+    --accent: 180 100% 50%;
+    --accent-foreground: 240 10% 3.9%;
+
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 0 0% 98%;
+
+    --border: 240 5% 20%;
+    --input: 240 5% 20%;
+    --ring: 180 100% 50%;
+
+    /* Sidebar specific colors */
+    --sidebar-background: 240 10% 3.9%;
+    --sidebar-foreground: 240 5% 64.9%;
+    --sidebar-primary: 270 70% 60%;
+    --sidebar-primary-foreground: 240 5% 64.9%;
+    --sidebar-accent: 240 5% 20%;
+    --sidebar-accent-foreground: 180 100% 50%;
+    --sidebar-border: 240 5% 20%;
+    --sidebar-ring: 180 100% 50%;
+  }
 }
